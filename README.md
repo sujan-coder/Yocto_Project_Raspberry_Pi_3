@@ -4,5 +4,5 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
 ## Project Overview
 * **Target Devive:** Raspbery Pi 3 (Model B)
 * **Build System:** Yocto Project
-**Host OS:** Ubuntu 22.04 LTS
-**Yocto Version:** Kirkstone
+* **Host OS:** Ubuntu 22.04 LTS
+* **Yocto Version:** Kirkstone
