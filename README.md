@@ -6,3 +6,21 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
 * **Build System:** Yocto Project
 * **Host OS:** Ubuntu 22.04 LTS
 * **Yocto Version:** Kirkstone
+## Installation Procedure
+```sh
+$ mkdir yocto
+
+$ cd yocto
+
+$ mkdir sources/
+
+$ cd sources/
+
+$ git clone git://git.yoctoproject.org/poky
+
+$ git clone git://git.yoctoproject.org/meta-raspberrypi
+
+$ cd ..
+$ source sources/poky/oe-init-build-env
+$ vi conf/bblayers.conf
+
