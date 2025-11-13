@@ -6,6 +6,10 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
 * **Build System:** Yocto Project
 * **Host OS:** Ubuntu 22.04 LTS
 * **Yocto Version:** Kirkstone
+
+## Details
+* **Open Enbedded:**Build system and community
+* 
 ## Installation Procedure
 ```sh
 $ mkdir yocto
