@@ -8,8 +8,20 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
 * **Yocto Version:** Kirkstone
 
 ## Details
-* **Open Enbedded:**Build system and community
-* 
+* **Open Enbedded:** Build system and community
+* **Yocto Project:** Umbrella project and community
+* **Metadata:** files containing information about how to build an image
+* **Recipe:** file with instructions to build one or more packages
+* **Layers:** directory containing grouped metadata (start with "meta-")
+* **Board support package (BSP):** layer that defines how to build for board (usually maintained by vendor
+* **Distribution:** specific implementation of Linux (kernel version, rootfs, etc.)
+* **Machine:** defines the architecture, pins, buses, BSP, etc
+* **Image:** output of build process (bootable and executable Linux OS)
+
+**Poky = BitBake + Metadata**
+* **Poky:** Build System used by Yocto Project
+* **BitBake:** A task executor and scheduler
+
 ## Installation Procedure
 ```sh
 $ mkdir yocto
