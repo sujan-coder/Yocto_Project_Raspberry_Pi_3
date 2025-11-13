@@ -18,7 +18,7 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
 * **Machine:** defines the architecture, pins, buses, BSP, etc
 * **Image:** output of build process (bootable and executable Linux OS)
 
-**Poky = BitBake + Metadata**
+  **Poky = BitBake + Metadata**
 * **Poky:** Build System used by Yocto Project
 * **BitBake:** A task executor and scheduler
 
