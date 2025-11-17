@@ -26,10 +26,20 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
  **Clone poky kirkstone** ⇨ **Clone Layer meta-raspberrypi** ⇨ **Create Build Directory using env** (Initialize Build Environment) ⇨ **Edit bblayers.conf** (Add BSP Layer) ⇨ **Edit local.conf** (machine, Uart, SSh) ⇨ **Bitbake core-image-minimal** (Build) ⇨ **Flash** 
 
 ## Installation Procedure
+### Install Prerequisites
 ```sh
-$ mkdir yocto
-
-$ cd yocto
+$ sudo apt-get install gawk wget git-core diffstat unzip \
+texinfo gcc-multilib build-essential chrpath zstd
+```
+### Clone the Yocto Layers
+#### 1. Poky (core layer and build system)
+```sh
+$ git clone git://git.yoctoproject.org/poky -b Kirkstone
+```
+#### 2. meta-raspberrypi (BSP layer)
+```sh
+$git clone git://git.yocyoproject.org/meta-raspberrypi -b Kirkstone
+```
 
 $ mkdir sources/
 
