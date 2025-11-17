@@ -23,7 +23,7 @@ Contains Yocto Configuration files, custom layer settings, and build outputs for
 * **BitBake:** A task executor and scheduler
 
 ## Yocto Installation Flow 
- **clone poky kirkstone** ⇨ **clone Layer meta-raspberrypi** ⇨ **Create Build Directory using env** (Initialize Build Environment) ⇨ **Edit bblayers.conf** (Add BSP Layer) ⇨ **Edit local.conf** (machine, Uart, SSh) ⇨ **Bitbake core-image-minimal** (Build) ⇨ **Flash** 
+ **Clone poky kirkstone** ⇨ **Clone Layer meta-raspberrypi** ⇨ **Create Build Directory using env** (Initialize Build Environment) ⇨ **Edit bblayers.conf** (Add BSP Layer) ⇨ **Edit local.conf** (machine, Uart, SSh) ⇨ **Bitbake core-image-minimal** (Build) ⇨ **Flash** 
 
 ## Installation Procedure
 ```sh
