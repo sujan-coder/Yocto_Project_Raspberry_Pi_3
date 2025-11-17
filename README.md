@@ -32,6 +32,7 @@ $ sudo apt-get install gawk wget git-core diffstat unzip \
 texinfo gcc-multilib build-essential chrpath zstd
 ```
 ### Clone the Yocto Layers
+Create a source directory and include these layers
 #### 1. Poky (core layer and build system)
 ```sh
 $ git clone git://git.yoctoproject.org/poky -b Kirkstone
@@ -40,14 +41,8 @@ $ git clone git://git.yoctoproject.org/poky -b Kirkstone
 ```sh
 $git clone git://git.yocyoproject.org/meta-raspberrypi -b Kirkstone
 ```
-
-$ mkdir sources/
-
-$ cd sources/
-
-$ git clone git://git.yoctoproject.org/poky
-
-$ git clone git://git.yoctoproject.org/meta-raspberrypi
+#### 3. meta-openembedded (extended recipes and metadata)
+```sh
 
 $ cd ..
 $ source sources/poky/oe-init-build-env
