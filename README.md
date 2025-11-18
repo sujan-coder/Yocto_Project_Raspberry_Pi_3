@@ -32,18 +32,51 @@ $ sudo apt-get install gawk wget git-core diffstat unzip \
 texinfo gcc-multilib build-essential chrpath zstd
 ```
 ### Clone the Yocto Layers
-Create a source directory and include these layers
+Create a sources directory and include these layers
 #### 1. Poky (core layer and build system)
 ```sh
+$ mkdir sources
+$ cd sources/
 $ git clone git://git.yoctoproject.org/poky -b Kirkstone
 ```
 #### 2. meta-raspberrypi (BSP layer)
 ```sh
 $git clone git://git.yocyoproject.org/meta-raspberrypi -b Kirkstone
 ```
-#### 3. meta-openembedded (extended recipes and metadata)
+### Configuration
+Go to your initial directory (in my case its Yocto) & run this command to create a dedicated environment.
 ```sh
+$ source sources/poky/oe-init-build-env
+```
+Navigate to build directory
+```sh
+$ cd build/conf/
+$ vi bblayers.conf
+```
+Setup bblayers.conf
+```sh
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
 
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  /home/labuser/Desktop/yocto/sources/poky/meta \
+  /home/labuser/Desktop/yocto/sources/poky/meta-poky \
+  /home/labuser/Desktop/yocto/sources/meta-raspberrypi \
+  "
+```
+Configure local.conf
+```sh
+MACHINE ??= "raspberrypi3"
+EXTRA_IMAGE_FEATURES:append = " ssh-server-openssh"
+```
+Configure 
+
+$
+###
 $ cd ..
 $ source sources/poky/oe-init-build-env
 $ vi conf/bblayers.conf
