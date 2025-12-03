@@ -81,15 +81,15 @@ $ cd ..
 $ source sources/poky/oe-init-build-env
 $ vi conf/bblayers.conf
 
-###Custom Layer
+##Custom Layer
 ```sh
 bitbake-layers create-layer meta-mylayer
 cat /proc/sys/fs/inotify/max_user_instances 
 cat /proc/sys/fs/inotify/max_queued_events 
 cat /proc/sys/fs/inotify/max_user_watches 
-
-Issue
-
+```
+###Issue
+```sh
 cat /proc/sys/fs/inotify/max_queued_events 
 sudo sysctl -w fs.inotify.max_queued_events=32768
 echo "fs.inotify.max_queued_events=32768" | sudo tee -a /etc/sysctl.conf 
@@ -102,3 +102,4 @@ pkill -9 bitbake-worker
 bitbake-layers create-layer meta-mylayer
 bitbake-layers show-layers
 bitbake-layers add-layer ../meta-mylayer
+```
