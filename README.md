@@ -81,3 +81,6 @@ $ cd ..
 $ source sources/poky/oe-init-build-env
 $ vi conf/bblayers.conf
 
+###Custom Layer
+```sh
+
